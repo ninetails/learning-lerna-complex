@@ -7,7 +7,11 @@
     "type": "git",
     "url": "git+https://github.com/ninetails/learning-lerna-complex.git"
   },
-  "keywords": ["lerna", "monorepo", "react"],
+  "keywords": [
+    "lerna",
+    "monorepo",
+    "react"
+  ],
   "author": "Ninetails - Carlos Kazuo",
   "license": "MIT",
   "bugs": {
@@ -15,6 +19,8 @@
   },
   "homepage": "https://github.com/ninetails/learning-lerna-complex#readme",
   "devDependencies": {
+    "@commitlint/cli": "^7.1.2",
+    "@commitlint/config-lerna-scopes": "^7.1.2",
     "babel-eslint": "^9.0.0",
     "eslint": "^5.5.0",
     "eslint-config-standard": "^12.0.0",
@@ -28,8 +34,9 @@
     "lerna": "^3.3.2"
   },
   "scripts": {
-    "test": "lerna run test",
+    "commitmsg": "commitlint -E GIT_PARAMS",
     "lint": "eslint .",
-    "precommit": "npm run lint"
+    "precommit": "npm run lint",
+    "test": "lerna run test"
   }
 }
