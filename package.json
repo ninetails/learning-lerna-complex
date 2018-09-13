@@ -1,20 +1,15 @@
 {
   "name": "learning-lerna-complex",
-  "version": "1.0.0",
-  "description": "",
-  "main": "index.js",
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "lint": "eslint .",
-    "precommit": "npm run lint"
-  },
+  "version": "0.0.0",
+  "private": true,
+  "description": "A complex example using Lerna",
   "repository": {
     "type": "git",
     "url": "git+https://github.com/ninetails/learning-lerna-complex.git"
   },
-  "keywords": [],
-  "author": "",
-  "license": "ISC",
+  "keywords": ["lerna", "monorepo", "react"],
+  "author": "Ninetails - Carlos Kazuo",
+  "license": "MIT",
   "bugs": {
     "url": "https://github.com/ninetails/learning-lerna-complex/issues"
   },
@@ -30,6 +25,11 @@
     "eslint-plugin-react": "^7.11.1",
     "eslint-plugin-standard": "^4.0.0",
     "husky": "^0.14.3",
-    "lerna": "^3.3.0"
+    "lerna": "^3.3.2"
+  },
+  "scripts": {
+    "test": "lerna run test",
+    "lint": "eslint .",
+    "precommit": "npm run lint"
   }
 }
