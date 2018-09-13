@@ -19,7 +19,7 @@
   },
   "homepage": "https://github.com/ninetails/learning-lerna-complex#readme",
   "workspaces": [
-    "package/*/dist",
+    "packages/*/dist",
     "packages/*"
   ],
   "devDependencies": {

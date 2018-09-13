@@ -1,6 +1,6 @@
 {
   "packages": [
-    "package/*/dist",
+    "packages/*/dist",
     "packages/*"
   ],
   "npmClient": "yarn",
