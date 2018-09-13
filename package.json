@@ -38,6 +38,11 @@
     "lerna": "^3.3.2"
   },
   "scripts": {
+    "app:start": "lerna run start --scope=@ninestuff/learning-lerna-complex-app",
+    "components:build": "lerna run build --scope=@ninestuff/learning-lerna-complex-components-dev",
+    "components:dev": "lerna run dev --scope=@ninestuff/learning-lerna-complex-components-dev",
+    "bootstrap": "lerna bootstrap",
+    "clean": "lerna clean",
     "commitmsg": "commitlint -E GIT_PARAMS",
     "lint": "eslint .",
     "precommit": "npm run lint",
