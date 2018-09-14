@@ -39,12 +39,15 @@
   },
   "scripts": {
     "app:start": "lerna run start --scope=@ninestuff/learning-lerna-complex-app",
-    "components:build": "lerna run build --scope=@ninestuff/learning-lerna-complex-components-dev",
-    "components:dev": "lerna run dev --scope=@ninestuff/learning-lerna-complex-components-dev",
     "bootstrap": "lerna bootstrap",
     "clean": "lerna clean",
+    "clean:all": "yarn clean && rm -rf node_modules yarn.lock",
     "commitmsg": "commitlint -E GIT_PARAMS",
+    "components:build": "lerna run build --scope=@ninestuff/learning-lerna-complex-components-dev",
+    "components:create:dist": "lerna run create:dist --scope=@ninestuff/learning-lerna-complex-components-dev",
+    "components:dev": "lerna run dev --scope=@ninestuff/learning-lerna-complex-components-dev",
     "lint": "eslint .",
+    "preinstall": "yarn components:create:dist",
     "precommit": "npm run lint",
     "test": "lerna run test"
   }

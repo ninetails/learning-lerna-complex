@@ -31,7 +31,8 @@
   },
   "scripts": {
     "babel": "babel src --out-dir dist -s",
-    "build": "node ./build.js && yarn babel",
+    "build": "yarn create:dist && yarn babel",
+    "create:dist": "node ./build.js",
     "dev": "yarn babel -w",
     "postinstall": "yarn build"
   }
